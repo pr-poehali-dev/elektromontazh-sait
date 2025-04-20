@@ -8,6 +8,8 @@ import Index from "./pages/Index";
 import Contacts from "./pages/contacts";
 import Links from "./pages/links";
 import ElectricalWiring from "./pages/services/electrical-wiring";
+import ElectricalPanels from "./pages/services/electrical-panels";
+import Lighting from "./pages/services/lighting";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,6 +25,8 @@ const App = () => (
           <Route path="/contacts" element={<Contacts />} />
           <Route path="/links" element={<Links />} />
           <Route path="/services/electrical-wiring" element={<ElectricalWiring />} />
+          <Route path="/services/electrical-panels" element={<ElectricalPanels />} />
+          <Route path="/services/lighting" element={<Lighting />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

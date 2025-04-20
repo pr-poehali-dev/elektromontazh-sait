@@ -1,6 +1,7 @@
 
 import { ExternalLink } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import Navbar from "@/components/ui/navbar";
 import Footer from "@/components/Footer";
 
@@ -13,52 +14,48 @@ const Links = () => {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold text-center mb-12">Мои сайты</h1>
           
-          <div className="max-w-xl mx-auto">
-            <Card className="mb-8">
+          <div className="max-w-lg mx-auto grid grid-cols-1 gap-6">
+            <Card>
               <CardHeader>
-                <CardTitle>Электрик в Колпино</CardTitle>
-                <CardDescription>Другие мои сайты об электромонтажных работах в Колпино</CardDescription>
+                <CardTitle>Электрик Колпино - Официальный сайт</CardTitle>
+                <CardDescription>Информация об услугах электрика в Колпино</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="grid gap-4">
+              <CardContent>
+                <p className="mb-4">На сайте вы найдете подробную информацию об электромонтажных услугах в Колпино и Колпинском районе.</p>
+                <Button asChild className="w-full">
                   <a 
                     href="http://elektrikkolpino.bos.ru" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="flex items-center justify-between p-4 rounded-lg border hover:bg-primary/5 transition-colors"
+                    className="flex items-center justify-center"
                   >
-                    <div className="font-medium">elektrikkolpino.bos.ru</div>
-                    <ExternalLink className="h-4 w-4 text-primary" />
+                    Перейти на сайт
+                    <ExternalLink className="ml-2 h-4 w-4" />
                   </a>
-                  
+                </Button>
+              </CardContent>
+            </Card>
+            
+            <Card>
+              <CardHeader>
+                <CardTitle>Электрик Колпино - Дополнительный ресурс</CardTitle>
+                <CardDescription>Расширенная информация о работах электрика</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="mb-4">Ресурс содержит информацию о дополнительных услугах и специальных предложениях электрика в Колпино.</p>
+                <Button asChild className="w-full">
                   <a 
                     href="https://elektrik-kolpino.narod.ru" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="flex items-center justify-between p-4 rounded-lg border hover:bg-primary/5 transition-colors"
+                    className="flex items-center justify-center"
                   >
-                    <div className="font-medium">elektrik-kolpino.narod.ru</div>
-                    <ExternalLink className="h-4 w-4 text-primary" />
+                    Перейти на сайт
+                    <ExternalLink className="ml-2 h-4 w-4" />
                   </a>
-                </div>
-                
-                <div className="pt-4 border-t">
-                  <p className="text-center text-sm text-muted-foreground">
-                    На этих сайтах вы также можете найти информацию о моих услугах в Колпино
-                  </p>
-                </div>
+                </Button>
               </CardContent>
             </Card>
-            
-            <div className="text-center">
-              <h2 className="text-2xl font-bold mb-4">Электромонтажные работы в Колпино</h2>
-              <p className="mb-6">
-                На всех моих сайтах представлена информация о профессиональных услугах электрика в Колпино.
-              </p>
-              <p>
-                Для вызова электрика на дом звоните по телефону 8 950 030 88 30.
-              </p>
-            </div>
           </div>
         </div>
       </main>

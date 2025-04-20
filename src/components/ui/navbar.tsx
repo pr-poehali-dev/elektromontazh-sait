@@ -18,7 +18,6 @@ const Navbar = () => {
         <NavigationMenu className="mx-auto">
           <NavigationMenuList>
             <NavigationMenuItem>
-              {/* Исправлено: больше не использует Link и NavigationMenuLink вместе */}
               <NavigationMenuLink asChild>
                 <Link to="/" className={navigationMenuTriggerStyle()}>
                   Главная
@@ -30,7 +29,6 @@ const Navbar = () => {
               <NavigationMenuTrigger>Услуги</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <div className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                  {/* Используем div вместо Link + className */}
                   <Link 
                     to="/services/electrical-wiring" 
                     className={cn(
@@ -75,7 +73,6 @@ const Navbar = () => {
             </NavigationMenuItem>
             
             <NavigationMenuItem>
-              {/* Исправлено: больше не использует Link и NavigationMenuLink вместе */}
               <NavigationMenuLink asChild>
                 <Link to="/contacts" className={navigationMenuTriggerStyle()}>
                   Контакты
@@ -84,7 +81,6 @@ const Navbar = () => {
             </NavigationMenuItem>
             
             <NavigationMenuItem>
-              {/* Исправлено: больше не использует Link и NavigationMenuLink вместе */}
               <NavigationMenuLink asChild>
                 <Link to="/links" className={navigationMenuTriggerStyle()}>
                   Мои сайты
