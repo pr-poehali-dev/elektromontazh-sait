@@ -9,6 +9,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import { cn } from "@/lib/utils";
 
 const Navbar = () => {
   return (
@@ -17,30 +18,53 @@ const Navbar = () => {
         <NavigationMenu className="mx-auto">
           <NavigationMenuList>
             <NavigationMenuItem>
-              <Link to="/">
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              {/* Исправлено: больше не использует Link и NavigationMenuLink вместе */}
+              <NavigationMenuLink asChild>
+                <Link to="/" className={navigationMenuTriggerStyle()}>
                   Главная
-                </NavigationMenuLink>
-              </Link>
+                </Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
             
             <NavigationMenuItem>
               <NavigationMenuTrigger>Услуги</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <div className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                  <Link to="/services/electrical-wiring" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                  {/* Используем div вместо Link + className */}
+                  <Link 
+                    to="/services/electrical-wiring" 
+                    className={cn(
+                      "block select-none space-y-1 rounded-md p-3 leading-none no-underline",
+                      "outline-none transition-colors hover:bg-accent hover:text-accent-foreground",
+                      "focus:bg-accent focus:text-accent-foreground"
+                    )}
+                  >
                     <div className="text-sm font-medium leading-none">Электропроводка</div>
                     <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                       Монтаж и замена электропроводки в Колпино
                     </p>
                   </Link>
-                  <Link to="/services/electrical-panels" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                  <Link 
+                    to="/services/electrical-panels" 
+                    className={cn(
+                      "block select-none space-y-1 rounded-md p-3 leading-none no-underline",
+                      "outline-none transition-colors hover:bg-accent hover:text-accent-foreground",
+                      "focus:bg-accent focus:text-accent-foreground"
+                    )}
+                  >
                     <div className="text-sm font-medium leading-none">Электрощиты</div>
                     <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                       Установка и сборка электрощитов
                     </p>
                   </Link>
-                  <Link to="/services/lighting" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                  <Link 
+                    to="/services/lighting" 
+                    className={cn(
+                      "block select-none space-y-1 rounded-md p-3 leading-none no-underline",
+                      "outline-none transition-colors hover:bg-accent hover:text-accent-foreground",
+                      "focus:bg-accent focus:text-accent-foreground"
+                    )}
+                  >
                     <div className="text-sm font-medium leading-none">Освещение</div>
                     <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                       Монтаж светильников и люстр
@@ -51,19 +75,21 @@ const Navbar = () => {
             </NavigationMenuItem>
             
             <NavigationMenuItem>
-              <Link to="/contacts">
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              {/* Исправлено: больше не использует Link и NavigationMenuLink вместе */}
+              <NavigationMenuLink asChild>
+                <Link to="/contacts" className={navigationMenuTriggerStyle()}>
                   Контакты
-                </NavigationMenuLink>
-              </Link>
+                </Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
             
             <NavigationMenuItem>
-              <Link to="/links">
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              {/* Исправлено: больше не использует Link и NavigationMenuLink вместе */}
+              <NavigationMenuLink asChild>
+                <Link to="/links" className={navigationMenuTriggerStyle()}>
                   Мои сайты
-                </NavigationMenuLink>
-              </Link>
+                </Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
